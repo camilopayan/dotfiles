@@ -1,0 +1,11 @@
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/mobilityinstall-vim-lsp.log')
+au User lsp_setup call lsp#register_server({
+    \ 'name': 'php',
+    \ 'cmd': {server_info->['php', expand('vendor/bin/php-language-server.php')]},
+    \ 'whitelist': ['php'],
+    \ })
+
+autocmd FileType php setlocal omnifunc=lsp#complete
+
+let g:vdebug_options.path_maps = {"/home/vagrant/code": "/Users/camilo/Code/MPEnterprises/mobilityinstall"}
