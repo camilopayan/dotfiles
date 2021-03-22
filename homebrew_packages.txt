@@ -1,0 +1,12 @@
+asdf
+curl
+gh
+git
+jump
+node
+postgresql
+ripgrep
+ruby@2.6
+tmux
+vim
+zplug
