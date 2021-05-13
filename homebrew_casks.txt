@@ -1,8 +1,0 @@
-1password
-brave-browser
-font-hack-nerd-font
-iterm2
-slack
-soundsource
-spectacle
-zoom
