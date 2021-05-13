@@ -19,8 +19,15 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'vim-vdebug/vdebug'
 Plug 'lifepillar/vim-solarized8'
+Plug 'tpope/vim-dadbod'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+" Airline
+set t_Co=256
+let g:airline_theme='luna'
 
 " Syntax and tabbing
 set expandtab
@@ -103,3 +110,15 @@ au FileType blade.php set filetype=html.php
 
 set background=light
 colorscheme solarized8_high
+
+function! Scratch()
+    tabnew
+    noswapfile hide enew
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    "setlocal nobuflisted
+    "lcd ~
+    file scratch
+endfunction
+
+nnoremap <Leader>ts :call Scratch()<CR>
