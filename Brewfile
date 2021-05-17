@@ -13,7 +13,7 @@ brew "vim"
 brew "zplug"
 brew "python"
 brew "reattach-to-user-namespace" # To support tmux
-
+brew "gpg"
 
 cask_args appdir: "/Applications"
 cask "1password"
