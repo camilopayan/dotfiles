@@ -14,6 +14,7 @@ brew "zplug"
 brew "python"
 brew "reattach-to-user-namespace" # To support tmux
 brew "gpg"
+brew "gawk"
 
 cask_args appdir: "/Applications"
 cask "1password"
