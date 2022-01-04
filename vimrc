@@ -14,7 +14,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-fugitive'
 Plug 'SirVer/UltiSnips'
 Plug 'honza/vim-snippets'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'vim-vdebug/vdebug'
@@ -85,6 +85,7 @@ highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 let g:ale_fixers={
   \'php': ['prettier'],
+  \'ruby': ['prettier'],
 \}
 
 " polyglot
