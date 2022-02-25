@@ -22,6 +22,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-dadbod'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-rails'
 
 call plug#end()
 
