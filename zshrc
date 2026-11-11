@@ -1,8 +1,11 @@
-export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
-export ZPLUG_HOME=/usr/local/opt/zplug
+# Homebrew lives in /opt/homebrew on Apple Silicon and /usr/local on Intel
+for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+  [[ -x $brew_bin ]] && eval "$($brew_bin shellenv)" && break
+done
+export ZPLUG_HOME="${HOMEBREW_PREFIX:-/usr/local}/opt/zplug"
 source $ZPLUG_HOME/init.zsh
 
-eval "$(jump shell)"
+command -v jump >/dev/null && eval "$(jump shell)"
 
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/asdf",   from:oh-my-zsh
